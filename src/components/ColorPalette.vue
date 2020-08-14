@@ -1,5 +1,5 @@
 <template>
-  <div class="max-width-default">
+  <div class="max-width-default tw-my-100">
     <h2 class="tw-mb-20 tw-text-primary-green-dark tw-font-bold bg-primary-yellow">Color palette</h2>
 
     <div class="tw-flex tw-flex-wrap tw-justify-around">

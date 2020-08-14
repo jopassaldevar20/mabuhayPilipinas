@@ -31,6 +31,21 @@ h5 {
   @apply tw-text-14;
 }
 
+.max-width-header {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 1470px) {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  @media only screen and (max-width: 760px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .max-width-default {
   max-width: 1200px;
   margin: 0 auto;
