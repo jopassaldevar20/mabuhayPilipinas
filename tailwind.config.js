@@ -45,6 +45,10 @@ module.exports = {
     },
     height: {
       50: '50px',
+      350: '350px',
+      600: '600px',
+      750: '750px',
+      full: '100%',
       screen: '100vh'
     },
     margin: {
@@ -59,6 +63,8 @@ module.exports = {
       100: '100px'
     },
     padding: {
+      5: '5px',
+      10: '10px',
       20: '20px',
       25: '25px',
       50: '50px',
@@ -80,8 +86,13 @@ module.exports = {
       '30%': '30%',
       '60%': '60%',
       full: '100%'
+    },
+    zIndex: {
+      header: '12'
     }
   },
-  variants: {},
+  variants: {
+    textDecoration: ['responsive', 'hover', 'focus', 'group-hover']
+  },
   plugins: []
 };

@@ -5,7 +5,7 @@
 
     <!-- Content -->
     <div>
-      <!-- <HighlightPlaces /> -->
+      <HeroLanding />
 
       <ColorPalette/>
     </div>
@@ -18,8 +18,8 @@
 <script>
 import { mapState, mapMutations } from 'vuex';
 import TheHeader from './components/TheHeader.vue';
-// import HighlightPlaces from './components/HighlightPlaces.vue';
-import ColorPalette from './components/ColorPalette.vue';
+import HeroLanding from './views/HeroLanding.vue';
+import ColorPalette from './views/ColorPalette.vue';
 import TheFooter from './components/TheFooter.vue';
 
 export default {
@@ -27,7 +27,7 @@ export default {
 
   components: {
     TheHeader,
-    // HighlightPlaces,
+    HeroLanding,
     ColorPalette,
     TheFooter
   },

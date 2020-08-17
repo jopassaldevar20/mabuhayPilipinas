@@ -1,6 +1,6 @@
 <template>
   <div :class="[
-    'tw-w-full tw-top-0 tw-left-0',
+    'tw-w-full tw-top-0 tw-left-0 tw-z-header',
     stickyHeader ? 'tw-fixed tw-transform tw-bg-primary-green' : 'tw-absolute',
     showSub ? 'tw-transition-transform tw-duration-200 tw-ease-linear tw-translate-y-0' : 'tw--translate-y-100%'
   ]">
@@ -20,18 +20,18 @@
 
       <i
         v-if="isMobileLayout"
-        class="material-icons-outlined tw-text-28 tw-cursor-pointer hover:tw-text-primary-green-dark"
-        @click="showSub = true"
+        class="material-icons-outlined tw-text-primary-white tw-text-28 tw-cursor-pointer hover:tw-text-primary-green"
+        @click="showSideNav = true"
       >menu</i>
 
-      <div v-else class="tw-text-20 tw-font-medium tw-flex">
-        <a v-for="nav in navs" :key="nav.id" href="./" class="tw-ml-30 hover:tw-text-primary-green-dark">
+      <div v-else class="tw-text-20 tw-text-primary-white tw-font-medium tw-flex">
+        <a v-for="nav in navs" :key="nav.id" href="./" class="tw-ml-30 hover:tw-text-primary-green">
           <p>{{ nav.text }}</p>
         </a>
       </div>
     </div>
 
-    <TheSidenav v-if="showSub" :navs="navs" @close="showSub = false" />
+    <TheSidenav v-if="showSideNav" :navs="navs" @close="showSideNav = false" />
   </div>
 </template>
 
@@ -52,7 +52,8 @@ export default {
         { id: 1, text: 'Highlight places' },
         { id: 2, text: 'Color palette' }
       ],
-      showSub: false
+      showSub: false,
+      showSideNav: false
     };
   },
 
@@ -67,7 +68,7 @@ export default {
   watch: {
     stickyHeader (newValue) {
       if (newValue) {
-        setTimeout(() => { this.showSub = true; }, 10);
+        setTimeout(() => { this.showSub = true; }, 100);
       } else {
         this.showSub = false;
       }
